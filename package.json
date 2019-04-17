@@ -1,0 +1,98 @@
+{
+  "_from": "git+https://github.com/afazelinia/JalaliCalendarPicker.git",
+  "_id": "react-native-jalali-calendar-picker@0.2.6",
+  "_inBundle": false,
+  "_location": "/react-native-jalali-calendar-picker",
+  "_phantomChildren": {
+    "jalaali-js": "1.1.0",
+    "moment": "2.18.1",
+    "rimraf": "2.6.2"
+  },
+  "_requested": {
+    "type": "git",
+    "raw": "react-native-jalali-calendar-picker@git+https://github.com/afazelinia/JalaliCalendarPicker.git",
+    "name": "react-native-jalali-calendar-picker",
+    "escapedName": "react-native-jalali-calendar-picker",
+    "rawSpec": "git+https://github.com/afazelinia/JalaliCalendarPicker.git",
+    "saveSpec": "git+https://github.com/afazelinia/JalaliCalendarPicker.git",
+    "fetchSpec": "https://github.com/afazelinia/JalaliCalendarPicker.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/afazelinia/JalaliCalendarPicker.git#af8542cfd5666b58546c85ebe460a64916e51f45",
+  "_spec": "react-native-jalali-calendar-picker@git+https://github.com/afazelinia/JalaliCalendarPicker.git",
+  "_where": "D:\\work\\mine\\bazakchi-mobile\\bazak",
+  "author": {
+    "name": "Afshin Mehrabani",
+    "email": "afshin.meh@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/afshinm/JalaliCalendarPicker/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "expo": "^15.1.0",
+    "moment-jalaali": "^0.7.2",
+    "prop-types": "^15.6.0"
+  },
+  "deprecated": false,
+  "description": "Calendar Picker Component for React Native (Jalali)",
+  "devDependencies": {
+    "jest-expo": "^0.3.0",
+    "react": "~15.4.0",
+    "react-native": "0.42.3",
+    "react-native-scripts": "0.0.25",
+    "react-test-renderer": "~15.4.1",
+    "uuid": "^3.0.1"
+  },
+  "directories": {},
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "homepage": "https://github.com/afshinm/JalaliCalendarPicker",
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "keywords": [
+    "calendar",
+    "picker",
+    "calendar",
+    "picker",
+    "date",
+    "picker",
+    "day",
+    "picker",
+    "jalali",
+    "persian",
+    "farsi"
+  ],
+  "license": "GPLv3",
+  "main": "./CalendarPicker",
+  "maintainers": [
+    {
+      "name": "Afshin Mehrabani",
+      "email": "afshin.meh@gmail.com"
+    }
+  ],
+  "name": "react-native-jalali-calendar-picker",
+  "peerDependencies": {
+    "react": "~15.4.0",
+    "babel-preset-expo": "^2.0.0",
+    "react-native": "^0.42.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afshinm/JalaliCalendarPicker.git"
+  },
+  "scripts": {
+    "android": "react-native-scripts android",
+    "eject": "react-native-scripts eject",
+    "ios": "react-native-scripts ios",
+    "start": "react-native-scripts start",
+    "test": "node_modules/jest/bin/jest.js",
+    "test:watch": "node_modules/jest/bin/jest.js --watch"
+  },
+  "version": "0.2.6"
+}
