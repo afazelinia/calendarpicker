@@ -2,7 +2,8 @@ import React from 'react';
 import {
   View,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from 'react-native';
 import { Utils } from './Utils';
 import moment from 'moment-jalaali';
@@ -25,6 +26,7 @@ export default function Day(props) {
   } = props;
   const thisDay = moment(`${year}/${month + 1}/${day}`, 'jYYYY/jM/jD');
   const today = moment();
+  const scaler = Math.min(Dimensions.get('window').width, Dimensions.get('window').height) / 375;
   //today.setHours(0,0,0,0);
 
   let dateOutOfRange = false;
@@ -105,19 +107,19 @@ export default function Day(props) {
 
   if (dateOutOfRange) {
     return (
-      <View style={styles.dayWrapper}>
-        <Text style={[textStyle, styles.disabledText]}>
+      <View style={{ alignItems: 'center', justifyContent: 'center', width: 50*scaler, height: 40*scaler, backgroundColor: 'rgba(0,0,0,0.0)' }}>
+        <Text style={{ fontSize: 14*scaler, color: '#BBBBBB', alignSelf: 'center', fontFamily: 'IRANSans' }}>
           { day }
         </Text>
       </View>
     )
   }
   return (
-    <View style={styles.dayWrapper}>
+    <View style={{ alignItems: 'center', justifyContent: 'center', width: 50*scaler, height: 40*scaler, backgroundColor: 'rgba(0,0,0,0.0)' }}>
       <TouchableOpacity
-        style={[styles.dayButton, daySelectedStyle]}
+        style={[{ width: 50*scaler, height: 40*scaler, alignSelf: 'center' }, daySelectedStyle]}
         onPress={() => onPressDay(day) }>
-        <Text style={[styles.dayLabel, textStyle, selectedDayColorStyle]}>
+        <Text style={[{ fontSize: 14*scaler, color: '#000', marginTop: 6*scaler, alignSelf: 'center', fontFamily: 'IRANSans' }, selectedDayColorStyle]}>
           { day }
         </Text>
       </TouchableOpacity>

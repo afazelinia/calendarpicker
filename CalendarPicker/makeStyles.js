@@ -74,7 +74,6 @@ export function makeStyles(scaler, backgroundColor, borderColor, textColor, toda
       backgroundColor: SELECTED_BG_COLOR,
 	  borderColor: SELECTED_BORDER_COLOR,
 	  borderWidth: 1,
-      marginTop: -10*scaler,
       alignSelf: 'center'
     },
 
@@ -83,7 +82,6 @@ export function makeStyles(scaler, backgroundColor, borderColor, textColor, toda
       height:30*scaler,
       backgroundColor: TODAY_BG_COLOR,
       borderRadius: 30*scaler,
-      marginTop: -10*scaler,
       alignSelf: 'center'
     },
 
@@ -101,7 +99,6 @@ export function makeStyles(scaler, backgroundColor, borderColor, textColor, toda
       borderTopLeftRadius: 20*scaler,
       borderBottomLeftRadius: 20*scaler,
       backgroundColor: SELECTED_BG_COLOR,
-      marginTop: -10*scaler,
       alignSelf: 'center',
     },
 
@@ -111,7 +108,6 @@ export function makeStyles(scaler, backgroundColor, borderColor, textColor, toda
       borderTopRightRadius: 20*scaler,
       borderBottomRightRadius: 20*scaler,
       backgroundColor: SELECTED_BG_COLOR,
-      marginTop: -10*scaler,
       alignSelf: 'center',
     },
 
@@ -119,7 +115,6 @@ export function makeStyles(scaler, backgroundColor, borderColor, textColor, toda
       width: 50*scaler,
       height: 30*scaler,
       backgroundColor: SELECTED_BG_COLOR,
-      marginTop: -10*scaler,
       alignSelf: 'center',
     },
 

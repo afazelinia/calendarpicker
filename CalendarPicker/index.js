@@ -4,13 +4,13 @@ import {
   Text,
   Dimensions,
   StyleSheet,
+  Dimension,
 } from 'react-native';
 import { makeStyles } from './makeStyles';
 import { Utils } from './Utils';
 import HeaderControls from './HeaderControls';
 import Weekdays from './Weekdays';
 import DaysGridView from './DaysGridView';
-import Swiper from './Swiper';
 import moment from 'moment-jalaali';
 
 const SWIPE_LEFT = 'SWIPE_LEFT';
@@ -198,12 +198,10 @@ export default class CalendarPicker extends Component {
       textStyle,
 	  disabledDates,
     } = this.props;
+    const scaler = Math.min(Dimensions.get('window').width, Dimensions.get('window').height) / 375;
     return (
-      <Swiper
-        onSwipe={(direction) => this.onSwipe(direction)}
-        config={swipeConfig}
-      >
-        <View syles={styles.calendar}>
+        <View style={{ display: 'flex', flexDirection: 'column', height: 320*scaler, marginTop: 10*scaler }}>
+          <View style={{ flex: 1 }}>
           <HeaderControls
             styles={styles}
             currentMonth={currentMonth}
@@ -216,12 +214,16 @@ export default class CalendarPicker extends Component {
             nextTitle={nextTitle}
             textStyle={textStyle}
           />
+          </View>
+          <View style={{ flex: 1.2 }}>
           <Weekdays
             styles={styles}
             startFromMonday={startFromMonday}
             weekdays={weekdays}
             textStyle={textStyle}
           />
+          </View>
+          <View style={{ flex: 5 }}>
           <DaysGridView
             month={currentMonth}
             year={currentYear}
@@ -236,8 +238,8 @@ export default class CalendarPicker extends Component {
 			disabledDates={disabledDates}
             textStyle={textStyle}
           />
+          </View>
         </View>
-      </Swiper>
     );
   }
 }

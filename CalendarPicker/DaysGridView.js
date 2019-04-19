@@ -63,7 +63,7 @@ export default function DaysGridView(props) {
                 allowRangeSelection={allowRangeSelection}
                 minDate={minDate}
                 maxDate={maxDate}
-                textStyle={textStyle}
+                textStyle={{ fontFamily: 'IRANSans' }}
 				disabledDates={disabledDates}
               />
             );
@@ -92,9 +92,16 @@ export default function DaysGridView(props) {
               allowRangeSelection={allowRangeSelection}
               minDate={minDate}
               maxDate={maxDate}
-              textStyle={textStyle}
+              textStyle={{ fontFamily: 'IRANSans' }}
 			  disabledDates={disabledDates}
             />
+          );
+        } else {
+          return (
+              <EmptyDay
+                  key={uuid()}
+                  styles={styles}
+              />
           );
         }
       }
@@ -103,9 +110,9 @@ export default function DaysGridView(props) {
     return column;
   }
   return (
-    <View style={styles.daysWrapper}>
+    <View style={{ alignSelf: 'center' }}>
       { guideArray.map(index => (
-          <View key={index} style={styles.weekRow}>
+          <View key={index} style={{ flexDirection: 'row' }}>
             { generateColumns(index) }
           </View>
         ))

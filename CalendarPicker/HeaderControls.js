@@ -2,6 +2,7 @@ import React from 'react';
 import {
   View,
   Text,
+  Dimensions,
 } from 'react-native';
 import { Utils } from './Utils';
 import Controls from './Controls';
@@ -27,28 +28,28 @@ export default function HeaderControls(props) {
   const next = nextTitle ? nextTitle : 'بعدی';
   const month = MONTHS[currentMonth];
   const year = currentYear;
-
+  const initialScale = Math.min(Dimensions.get('window').width, Dimensions.get('window').height) / 375;
   return (
-    <View style={styles.headerWrapper}>
-      <View style={styles.monthSelector}>
+    <View style={{ alignItems: "center", alignSelf: "center", backgroundColor: "rgba(0,0,0,0.0)", flexDirection: "row", marginBottom: 10*initialScale, padding: 5*initialScale, paddingBottom: 3*initialScale }}>
+      <View style={{ width: 80*initialScale }}>
         <Controls
           label={previous}
           onPressControl={onPressPrevious}
-          styles={styles.prev}
-          textStyles={textStyle}
+          styles={{ fontSize: 14*initialScale, textAlign: "right" }}
+          textStyles={{ fontFamily: 'IRANSans' }}
         />
       </View>
       <View>
-        <Text style={[styles.monthLabel, textStyle]}>
+        <Text style={{ color: "#000", fontSize: 16*initialScale, textAlign: "center", width: 180*initialScale, fontFamily: 'IRANSans' }}>
            { month } { year }
         </Text>
       </View>
-      <View style={styles.monthSelector}>
+      <View style={{ width: 80*initialScale }}>
         <Controls
           label={next}
           onPressControl={onPressNext}
-          styles={styles.next}
-          textStyles={textStyle}
+          styles={{ fontSize: 14*initialScale, textAlign: "left" }}
+          textStyles={{ fontFamily: 'IRANSans' }}
         />
       </View>
     </View>
